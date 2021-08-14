@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title>get radio button value jquery on change - Fastsnippets.com</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <meta name="theme-color" content="#7952b3" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet" />
+  </head>
+
+  <body class="text-center">
+    <main class="form-signin">
+      <img
+        class="mb-4"
+        src="https://fastsnippets.com/wp-content/uploads/2021/04/cropped-logo.png"
+        alt=""
+        style="max-width: 100%"
+      />
+      <h1>get radio button value jquery on change</h1>
+      <h2 class="h3 mb-3 fw-normal mt-5">Select your gender</h1>
+
+      <form>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            value="male"
+            id="male"
+            checked
+          />
+          <label class="form-check-label" for="male"> Male </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gender"
+            value="female"
+            id="female"
+          />
+          <label class="form-check-label" for="female"> Female </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary mt-5" type="submit">
+          Submit
+        </button>
+      </form>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input[name='gender']").change(function(){
+                var radioValue = $("input[name='gender']:checked").val();
+                if(radioValue){
+                    alert("Your Choose - " + radioValue);
+                }
+            });
+        });
+    </script>
+    </body>
+</html>
